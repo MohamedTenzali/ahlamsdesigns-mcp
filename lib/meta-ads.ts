@@ -1,6 +1,6 @@
 const BASE = "https://graph.facebook.com";
 const VERSION = process.env.META_API_VERSION ?? "v22.0";
-const TOKEN = process.env.META_ACCESS_TOKEN!;
+const getToken = () => process.env.META_ACCESS_TOKEN!;
 
 export class MetaApiError extends Error {
   constructor(public title: string, public userMsg: string, public code?: number) {
