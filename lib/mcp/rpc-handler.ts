@@ -19,7 +19,7 @@ export async function handleRpc(body: any): Promise<any> {
     return {
       jsonrpc: "2.0", id,
       result: {
-        protocolVersion: "2024-11-05",
+        protocolVersion: params?.protocolVersion ?? "2024-11-05",
         capabilities: { tools: {} },
         serverInfo: { name: "ahlamsdesigns-meta-mcp", version: "1.0.0" },
       },
